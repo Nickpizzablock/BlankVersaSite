@@ -15,6 +15,7 @@
                 --brown: #fef9f6;
                 color: pink;
                 font-family: "magica";
+                font-size: 1.125em;
             }
 
             body {
@@ -28,6 +29,8 @@
                 text-align: center;
             }
             #island {
+                border-radius: 25px 25px;
+                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
                 /* background-color: pink; */
                 /* border: solid;
                 border-color: var(--dark_blue);
@@ -40,8 +43,9 @@
             }
             header {
                 background-image: url("bg_top.gif");
-                background-size: cover;
+                background-size: 103%;
                 background-position: center;
+                background-repeat: no-repeat;
                 height: 200px;
                 border: solid;
                 border-color: var(--dark_blue);
@@ -68,8 +72,8 @@
             #nav {
                 order: 1;
                 flex-grow: 1;
-                background-color: red;
-                height: 40px;
+                background-color: var(--dark_purple);
+                /* height: 40px; */
 
                 border: solid;
                 border-color: var(--dark_blue);
@@ -122,6 +126,9 @@
                     flex-grow: 2;
                     background-color: orange;
                 }
+                .section {
+                    display:none;
+                }
             }
         </style>
     </head>
@@ -133,7 +140,33 @@
             </header>
             <main id="grid">
                 <nav id="nav">
-                    Nav Dubz
+                    <div class="section-title">
+                        Nav
+                    </div>
+                    <div class="subsection">
+                        Personal
+                    </div>
+                    <div class="section">
+                        About Me
+                    </div>
+                    <div class="section">
+                        Friends
+                    </div>
+                    <div class="section">
+                        Useful Sites
+                    </div>
+                    <div class="subsection">
+                        Blog
+                    </div>
+                    <div class="section">
+                        Anime
+                    </div>
+                    <div class="section">
+                        Content Creators
+                    </div>
+                    <div class="section">
+                        Projects
+                    </div>
                 </nav>
                 <section id="content">
                     Content

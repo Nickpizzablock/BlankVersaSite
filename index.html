@@ -19,7 +19,21 @@
                 /* font-size: 1.125em; */
                 font-size: 1.2em;
             }
-
+            a {
+                text-decoration: none;
+                color: pink;
+            }
+            a:hover {
+                font-weight: bold;
+            }
+            /* a:hover::before {
+                content: "「";
+                display: inline;
+            }
+            a:hover::after {
+                content: "」";
+                display: inline;
+            } */
             body {
                 max-width: 1200px;
                 margin: 0 auto;
@@ -28,11 +42,13 @@
                 font-size: 1.125em;
                 background-image: url(PillsAndBandaidsAltGrey.png);
                 background-color: rgb(179, 153, 189);
+                background-attachment: fixed;
+                background-position: center;
                 text-align: center;
             }
             #island {
-                border-radius: 25px 25px;
-                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
+                border-radius: 25px;
+                /* box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5); */
                 /* background-color: pink; */
                 /* border: solid;
                 border-color: var(--dark_blue);
@@ -45,6 +61,7 @@
             }
             header {
                 background-image: url("bg_top.gif");
+                background-color: var(--dark_purple);
                 background-size: 103%;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -52,9 +69,11 @@
                 border: solid;
                 border-color: var(--dark_blue);
                 border-width: 6px;
-                border-radius: 25px 25px 0 0;
+                border-radius: 25px;
                 background-clip: border-box;
                 overflow: hidden;
+                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
+
             }
             #header-image {
                 height: 200%;
@@ -65,15 +84,20 @@
             #grid {
                 /* height: 2000px; */
                 /* padding: 10px 0 10px 0; */
-                background-color: azure;
+                /* background-color: var(--dark_purple); */
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                /* gap: 3px; */
+                gap: 6px;
+                padding: 6px 0 6px 0;
             }
             #nav {
+                /* Want to make a dropdown menu where everything is
+                collapsed but the personal tab is pre-opened. On click
+                more options will appear
                 order: 1;
-                flex-grow: 1;
+                /* flex-grow: 1; */
+                flex-basis: 20%;
                 background-color: var(--dark_purple);
                 /* height: 40px; */
                 /* text-align: left; */
@@ -81,36 +105,53 @@
                 border: solid;
                 border-color: var(--dark_blue);
                 border-width: 6px;
-                /* border-radius: 25px; */
+                border-radius: 25px;
                 background-clip: border-box;
+                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
+                overflow: hidden;
+
 
             }
             .section-title {
                 background-color: rgb(167, 25, 75);
+                line-height: 1.5em;
+                /* text-align: center; */
+            }
+            .section {
+                background-color: var(--light_purple);
+                border-top: solid;
+                border-color: var(--dark_blue);
+                border-width: 3px;
             }
             #content {
                 order: 2;
                 flex-grow: 2;
-                background-color: orange;
-                height: 40px;
+                background-color: var(--dark_purple);
+                /* height: 400px; */
 
                 border: solid;
                 border-color: var(--dark_blue);
                 border-width: 6px;
-                /* border-radius: 25px; */
+                border-radius: 25px;
                 background-clip: border-box;
+                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
+                overflow: hidden;
+
             }
             #updates {
                 order: 3;
-                flex-grow: 1;
-                background-color: yellow;
-                height: 40px;
+                /* flex-grow: 1; */
+                flex-basis: 20%;
+                background-color: var(--dark_purple);
+                /* height: 40px; */
 
                 border: solid;
                 border-color: var(--dark_blue);
                 border-width: 6px;
-                /* border-radius: 25px; */
+                border-radius: 25px;
                 background-clip: border-box;
+                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
+                overflow: hidden;
 
             }
             footer {
@@ -118,21 +159,30 @@
                 border: solid;
                 border-color: var(--dark_blue);
                 border-width: 6px;
-                border-radius: 0 0 25px 25px;
+                border-radius: 25px;
                 background-clip: border-box;
                 overflow: hidden;
+                min-height: 25px;
+                box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
+                position: relative;
+                z-index: 10; /* Kinda don't like this method */
             }
-            @media screen and (max-width: 768px) {
+            .welcome {
+                padding: 10px;
+                /* text-align: left; */
+                line-height: 1.5em;
+            }
+            @media screen and (max-width: 56em) {
                 #grid {
-                    background-color: maroon;
+                    /* background-color: maroon; */
                     flex-direction: column;
                 }
                 #content {
-                    order: 4;
+                    order: 2;
                     flex-grow: 2;
-                    background-color: orange;
+                    /* background-color: orange; */
                 }
-                .section {
+                .subsection {
                     display:none;
                 }
             }
@@ -147,46 +197,59 @@
             <main id="grid">
                 <nav id="nav">
                     <div class="section-title">
-                        Nav
-                    </div>
-                    <div class="subsection">
-                        Personal
+                        ≡ Nav
                     </div>
                     <div class="section">
-                        About Me
+                        ~Personal~
                     </div>
+                    <a href="/aboutme.html">
+                        <div class="subsection"> About Me </div>
+                    </a>
+                    <a href="/friends.html">
+                        <div class="subsection">Friends</div>
+                    </a>
+                    <a href="/useful-sites.html">
+                        <div class="subsection">Useful Sites</div>
+                    </a>
                     <div class="section">
-                        Friends
+                        ~Blog~
                     </div>
-                    <div class="section">
-                        Useful Sites
-                    </div>
-                    <div class="subsection">
-                        Blog
-                    </div>
-                    <div class="section">
-                        Anime
-                    </div>
-                    <div class="section">
-                        Content Creators
-                    </div>
-                    <div class="section">
-                        Projects
-                    </div>
+                    <a href="/anime.html">
+                        <div class="subsection">Anime</div>
+                    </a>
+                    <a href="/following.html">
+                        <div class="subsection">Following</div>
+                    </a>
+                    <a href="/projects.html">
+                        <div class="subsection">Projects</div>
+                    </a>
                 </nav>
                 <section id="content">
                     <div class="section-title">
-                        Content
+                        🖹 Content
+                    </div>
+                    <div class="welcome">
+                        <h1> ♥ Welcome ♥ </h1>
+                        <p> Hihi♥ I'm BlankVersa! Thanks for stopping by. </p>
+                        <p> I plan to create a content-creator focused page to 
+                            house all the things I'd like to share.
+                        </p>
                     </div>
                 </section>
                 <section id="updates">
                     <div class="section-title">
-                        Updates
+                        🗘 Updates
+                        <!-- Note: Will be filled using JS  -->
                     </div>
+                    <div class="section">
+                        <div class="date">✎ 10/2/25</div>
+                        <div class="content"> Launched site ♡ </div>
+                    </div>
+                    
                 </section>
             </main>
             <footer>
-                © BlankVersa 2025 ♥ Self-coded ♥ Sitemap ♡
+                 © BlankVersa 2025 ♥ Self-coded ♥♡ Sitemap 
             </footer>
         </div>
     </body>

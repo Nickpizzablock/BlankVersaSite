@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <style>
+            @font-face {
+                font-family: "Magica";
+                src: url(https://static.tumblr.com/p6yopnt/Qkiqnu0r5/theheart.ttf);
+            }
             :root {
                 --dark_purple: #1e1d32; /* global scope */
                 --light_purple: #2d2c41;
@@ -9,25 +13,28 @@
                 --medium_blue: #cbccfe;
                 --light_blue: #ddffff;
                 --brown: #fef9f6;
+                color: pink;
+                font-family: "magica";
             }
 
             body {
                 max-width: 1200px;
                 margin: 0 auto;
-                padding: 20px 30px;
+                padding: 20px 40px;
                 display: block;
                 font-size: 1.125em;
-                background-color: var(--dark_purple);
+                background-image: url(PillsAndBandaidsAltGrey.png);
+                background-color: rgb(179, 153, 189);
                 text-align: center;
             }
             #island {
-                background-color: pink;
-                border: solid;
-                border-color: var(--light_blue);
+                /* background-color: pink; */
+                /* border: solid;
+                border-color: var(--dark_blue);
                 border-width: 6px;
                 border-radius: 25px;
                 background-clip: border-box;
-                overflow: hidden;
+                overflow: hidden; */
                 /* padding: 6px; */
 
             }
@@ -36,6 +43,12 @@
                 background-size: cover;
                 background-position: center;
                 height: 200px;
+                border: solid;
+                border-color: var(--dark_blue);
+                border-width: 6px;
+                border-radius: 25px 25px 0 0;
+                background-clip: border-box;
+                overflow: hidden;
             }
             #header-image {
                 height: 200%;
@@ -45,23 +58,37 @@
             }
             #grid {
                 /* height: 2000px; */
-                padding: 10px;
+                /* padding: 10px 0 10px 0; */
                 background-color: azure;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
+                gap: 3px
             }
             #nav {
                 order: 1;
                 flex-grow: 1;
                 background-color: red;
                 height: 40px;
+
+                border: solid;
+                border-color: var(--dark_blue);
+                border-width: 6px;
+                /* border-radius: 25px; */
+                background-clip: border-box;
+
             }
             #content {
                 order: 2;
                 flex-grow: 2;
                 background-color: orange;
                 height: 40px;
+
+                border: solid;
+                border-color: var(--dark_blue);
+                border-width: 6px;
+                /* border-radius: 25px; */
+                background-clip: border-box;
             }
             #updates {
                 order: 3;
@@ -69,6 +96,21 @@
                 background-color: yellow;
                 height: 40px;
 
+                border: solid;
+                border-color: var(--dark_blue);
+                border-width: 6px;
+                /* border-radius: 25px; */
+                background-clip: border-box;
+
+            }
+            footer {
+                background-color: var(--light_purple);
+                border: solid;
+                border-color: var(--dark_blue);
+                border-width: 6px;
+                border-radius: 0 0 25px 25px;
+                background-clip: border-box;
+                overflow: hidden;
             }
             @media screen and (max-width: 768px) {
                 #grid {
@@ -101,7 +143,7 @@
                 </section>
             </main>
             <footer>
-                Footer
+                © BlankVersa 2025 ♥ Self-coded ♥ Sitemap ♡
             </footer>
         </div>
     </body>

@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <style>
+            /* Note: I want each section to be in its own bubble and own bubble shadow */
             @font-face {
                 font-family: "Magica";
                 src: url(https://static.tumblr.com/p6yopnt/Qkiqnu0r5/theheart.ttf);
@@ -15,7 +16,8 @@
                 --brown: #fef9f6;
                 color: pink;
                 font-family: "magica";
-                font-size: 1.125em;
+                /* font-size: 1.125em; */
+                font-size: 1.2em;
             }
 
             body {
@@ -67,13 +69,14 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                gap: 3px
+                /* gap: 3px; */
             }
             #nav {
                 order: 1;
                 flex-grow: 1;
                 background-color: var(--dark_purple);
                 /* height: 40px; */
+                /* text-align: left; */
 
                 border: solid;
                 border-color: var(--dark_blue);
@@ -81,6 +84,9 @@
                 /* border-radius: 25px; */
                 background-clip: border-box;
 
+            }
+            .section-title {
+                background-color: rgb(167, 25, 75);
             }
             #content {
                 order: 2;
@@ -169,10 +175,14 @@
                     </div>
                 </nav>
                 <section id="content">
-                    Content
+                    <div class="section-title">
+                        Content
+                    </div>
                 </section>
                 <section id="updates">
-                    Updates
+                    <div class="section-title">
+                        Updates
+                    </div>
                 </section>
             </main>
             <footer>

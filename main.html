@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            :root {
+                --dark_purple: #1e1d32; /* global scope */
+                --light_purple: #2d2c41;
+                --dark_blue: #b5bbd9;
+                --medium_blue: #cbccfe;
+                --light_blue: #ddffff;
+                --brown: #fef9f6;
+            }
+
+            body {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px 30px;
+                display: block;
+                font-size: 1.125em;
+                background-color: var(--dark_purple);
+                text-align: center;
+            }
+            #island {
+                background-color: pink;
+                border: solid;
+                border-color: var(--light_blue);
+                border-width: 6px;
+                border-radius: 25px;
+                background-clip: border-box;
+                overflow: hidden;
+                /* padding: 6px; */
+
+            }
+            header {
+                background-image: url("bg_top.gif");
+                background-size: cover;
+                background-position: center;
+                height: 200px;
+            }
+            #header-image {
+                height: 200%;
+                /* width: 100%; */
+                translate: 0 -25%;
+                object-fit: fill;
+            }
+            #grid {
+                /* height: 2000px; */
+                padding: 10px;
+                background-color: azure;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+            #nav {
+                order: 1;
+                flex-grow: 1;
+                background-color: red;
+                height: 40px;
+            }
+            #content {
+                order: 2;
+                flex-grow: 2;
+                background-color: orange;
+                height: 40px;
+            }
+            #updates {
+                order: 3;
+                flex-grow: 1;
+                background-color: yellow;
+                height: 40px;
+
+            }
+            @media screen and (max-width: 768px) {
+                #grid {
+                    background-color: maroon;
+                    flex-direction: column;
+                }
+                #content {
+                    order: 4;
+                    flex-grow: 2;
+                    background-color: orange;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="island">
+            <header>
+                <!-- Header -->
+                <img id="header-image" src="BlankVersaLogoTrans.png" alt="header image">
+            </header>
+            <main id="grid">
+                <nav id="nav">
+                    Nav
+                </nav>
+                <section id="content">
+                    Content
+                </section>
+                <section id="updates">
+                    Updates
+                </section>
+            </main>
+            <footer>
+                Footer
+            </footer>
+        </div>
+    </body>
+</html>

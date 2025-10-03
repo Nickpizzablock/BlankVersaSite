@@ -23,6 +23,9 @@
                 text-decoration: none;
                 color: pink;
             }
+            p a {
+                color: rgb(167, 25, 75);
+            }
             a:hover {
                 font-weight: bold;
             }
@@ -88,16 +91,17 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
+                align-items: flex-start;
                 gap: 6px;
                 padding: 6px 0 6px 0;
             }
             #nav {
                 /* Want to make a dropdown menu where everything is
                 collapsed but the personal tab is pre-opened. On click
-                more options will appear
+                more options will appear */
                 order: 1;
                 /* flex-grow: 1; */
-                flex-basis: 20%;
+                flex-basis: 15%;
                 background-color: var(--dark_purple);
                 /* height: 40px; */
                 /* text-align: left; */
@@ -109,8 +113,13 @@
                 background-clip: border-box;
                 box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
                 overflow: hidden;
+            }
 
-
+            .sticky {
+                position: sticky;
+                flex-grow: 0;
+                max-height: calc(100vh - (24px * 2));
+                top: 10px;
             }
             .section-title {
                 background-color: rgb(167, 25, 75);
@@ -125,9 +134,10 @@
             }
             #content {
                 order: 2;
-                flex-grow: 2;
+                flex-grow: 1;
+                flex-basis: 70%;
                 background-color: var(--dark_purple);
-                /* height: 400px; */
+                /* height: 4000px; */
 
                 border: solid;
                 border-color: var(--dark_blue);
@@ -140,8 +150,8 @@
             }
             #updates {
                 order: 3;
-                /* flex-grow: 1; */
-                flex-basis: 20%;
+                flex-grow: 0;
+                flex-basis: 15%;
                 background-color: var(--dark_purple);
                 /* height: 40px; */
 
@@ -176,11 +186,18 @@
                 #grid {
                     /* background-color: maroon; */
                     flex-direction: column;
+                    align-items: stretch;
                 }
                 #content {
                     order: 2;
-                    flex-grow: 2;
+                    /* flex-grow: 2; */
                     /* background-color: orange; */
+                }
+                .sticky {
+                    max-height: 100%;
+                    top: 0;
+                    position: relative;
+                    
                 }
                 .subsection {
                     display:none;
@@ -195,7 +212,7 @@
                 <img id="header-image" src="BlankVersaLogoTrans.png" alt="header image">
             </header>
             <main id="grid">
-                <nav id="nav">
+                <nav id="nav" class="sticky">
                     <div class="section-title">
                         ≡ Nav
                     </div>
@@ -234,9 +251,33 @@
                         <p> I plan to create a content-creator focused page to 
                             house all the things I'd like to share.
                         </p>
+                        <p> Here, you can find more 
+                            <a href="/aboutme.html"> about me</a>! Useful sites 
+                            will house my bookmarks, and I hope they can be 
+                            helpful for you too.
+                        </p>
+                        <p> I haven't been watching anime, but when I do, I have so 
+                            much to talk about, so you can see my reviews 
+                            <a href="/anime.html">here</a>. I love many generes 
+                            of music; check out my write-ups here. I am really 
+                            into computers and documentation, so here's a 
+                            collection of what I have solved.
+
+                        </p>
+                        <!-- <p> I have been meaning to make a website for a long 
+                            time. The biggest barrier is that I would have to 
+                            separate my online identity with my IRL identity. 
+                            That would mean that I would have to maintain 2 
+                            sites and choose which content would go in it.
+                        </p>
+                        <p> Personally, I am still debating this, but I am 
+                            thinking all that I would exclude would be in 
+                            professional settings (a work profile is just a 
+                            single page anyways).
+                        </p> -->
                     </div>
                 </section>
-                <section id="updates">
+                <section id="updates" class="sticky">
                     <div class="section-title">
                         🗘 Updates
                         <!-- Note: Will be filled using JS  -->

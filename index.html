@@ -38,9 +38,10 @@
                 display: inline;
             } */
             body {
-                max-width: 1200px;
+                /* max-width: 1200px; */
                 margin: 0 auto;
-                padding: 20px 40px;
+                /* padding: 20px 40px; */
+                padding: 6px;
                 display: block;
                 font-size: 1.125em;
                 background-image: url(PillsAndBandaidsAltGrey.png);
@@ -112,7 +113,7 @@
                 border-radius: 25px;
                 background-clip: border-box;
                 box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
-                overflow: hidden;
+                overflow: scroll;
             }
 
             .sticky {
@@ -120,7 +121,7 @@
                 flex-grow: 0;
                 max-height: calc(100vh - (24px * 2));
                 top: 10px;
-                height: 220px;
+                /* height: 220px; */
             }
             .section-title {
                 background-color: rgb(167, 25, 75);
@@ -133,12 +134,15 @@
                 border-color: var(--dark_blue);
                 border-width: 3px;
             }
+            .subsection {
+                line-height: 1.25em
+            }
             #content {
                 order: 2;
                 flex-grow: 1;
                 flex-basis: 70%;
                 background-color: var(--dark_purple);
-                /* height: 4000px; */
+                height: 4000px;
 
                 border: solid;
                 border-color: var(--dark_blue);
@@ -200,8 +204,11 @@
                     position: relative;
                     
                 }
+                .section {
+                    line-height: 1.25em;
+                }
                 .subsection {
-                    display:none;
+                    line-height: 1.5em;
                 }
             }
         </style>

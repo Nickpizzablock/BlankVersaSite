@@ -1,0 +1,9 @@
+:root {
+    --dark_purple: #1e1d32; /* global scope */
+    --light_purple: #2d2c41;
+    --dark_blue: #b5bbd9;
+    --medium_blue: #cbccfe;
+    --light_blue: #ddffff;
+    --brown: #fef9f6;
+    --light_maroon: #e83680;
+}

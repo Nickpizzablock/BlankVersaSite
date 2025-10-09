@@ -2,11 +2,11 @@
 ul.breadcrumb {
   /* padding-left: 6px; */
   padding: 0;
-  margin: 0;
+  margin: 0 5px;
   list-style: none;
   /* background-color: #1e1d32; */
   /* text-align: left; */
-  text-align: center;
+  text-align: left;
   line-height: 1.5em;
 }
 
@@ -20,13 +20,14 @@ ul.breadcrumb li {
 ul.breadcrumb li+li:before {
   /* padding: 8px; */
   color: var(--dark_blue);
-  content: "/\00a0";
+  content: "> ";
 }
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
   /* color: rgb(167, 25, 75); */
   color: var(--light_maroon);
+  /* color: var(--light_blue); */
   text-decoration: none;
   font-weight: lighter;
 }

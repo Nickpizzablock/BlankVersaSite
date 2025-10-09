@@ -19,7 +19,7 @@ a {
     color: pink;
 }
 p a {
-    color: var(--alt_purple);
+    color: var(--light_maroon);
 }
 a:hover {
     font-weight: bold;
@@ -33,7 +33,7 @@ a:hover::after {
     display: inline;
 } */
 body {
-    /* max-width: 1200px; */
+    max-width: 100em;
     margin: 0 auto;
     /* padding: 20px 40px; */
     padding: 6px;

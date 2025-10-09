@@ -157,7 +157,7 @@ nav {
     flex-grow: 1;
     flex-basis: 70%;
     background-color: var(--dark_purple);
-    height: 4000px;
+    /* height: 4000px; */
 
     border: solid;
     border-color: var(--dark_blue);
@@ -185,7 +185,11 @@ nav {
 
 }
 footer {
-    background-color: var(--light_purple);
+    color: var(--dark_maroon);
+    font-weight: bold;
+    margin-top: 10px;
+    height: 100px
+    /* background-color: var(--light_purple);
     border: solid;
     border-color: var(--dark_blue);
     border-width: 6px;
@@ -195,7 +199,8 @@ footer {
     min-height: 25px;
     box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
     position: relative;
-    z-index: 10; /* Kinda don't like this method */
+    z-index: 10; */
+    /* Kinda don't like this method */
 }
 .welcome {
     padding: 10px;

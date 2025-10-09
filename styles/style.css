@@ -9,6 +9,8 @@
     font-family: "magica";
     /* font-size: 1.125em; */
     font-size: 1.2em;
+    scrollbar-color: var(--dark_blue) var(--dark_purple);
+    /* scrollbar-color: var(--dark_blue) var(--light_purple); */
 }
 h1 {
     margin: 0 0 0 0;
@@ -91,7 +93,7 @@ header {
     gap: 6px;
     padding: 6px 0 6px 0;
 }
-#nav {
+nav {
     /* Want to make a dropdown menu where everything is
     collapsed but the personal tab is pre-opened. On click
     more options will appear */
@@ -102,15 +104,30 @@ header {
     /* height: 40px; */
     /* text-align: left; */
 
+    /* for separating title and content*/
+    display: flex;
+    flex-direction: column;
+
     border: solid;
     border-color: var(--dark_blue);
     border-width: 6px;
     border-radius: 25px;
     background-clip: border-box;
     box-shadow: 0 10px 15px 5px rgba(114, 75, 97, 0.5);
-    overflow: scroll;
+    overflow: hidden;
 }
-
+#nav-content {
+    /*use flex to separate scrollbar*/
+    overflow-y: auto;
+    flex: 1; /* Take remaining space */
+    background-color: var(--dark_purple);
+    min-height: 0; /* Allow shrinking */
+    /* scrollbar-gutter: stable both-edges; */
+    
+    /* Compensate for scrollbar width to maintain center alignment */
+    /* Simple approach: equal margins */
+    
+}
 .sticky {
     position: sticky;
     flex-grow: 0;
@@ -122,6 +139,7 @@ header {
     background-color: var(--alt_purple);
     line-height: 1.5em;
     border-bottom: 3px solid var(--dark_blue);
+    flex-shrink: 0; /* Prevent shrinking when using flex*/
     /* text-align: center; */
 }
 .section {
@@ -129,6 +147,7 @@ header {
     border-top: solid;
     border-color: var(--dark_blue);
     border-width: 3px;
+    /* padding: 0 6px 0 6px; */
 }
 .subsection {
     line-height: 1.25em;

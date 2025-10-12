@@ -208,6 +208,10 @@ footer {
     line-height: 1.5em;
 
 }
+figure img {
+    width: 5em;
+    
+}
 @media screen and (max-width: 56em) {
     #grid {
         /* background-color: maroon; */
@@ -229,6 +233,7 @@ footer {
         line-height: 1.25em;
     }
     .subsection {
+        display: none;
         line-height: 1.5em;
     }
 }

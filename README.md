@@ -10,3 +10,8 @@
     [ ] JS
 [ ] Optimize the CSS to prevent redundancy
 [ ] Change units away from px
+[ ] Make code converting Markdown to HTML
+    - Python-based
+    - idk implementation
+    - does not need to be completed now, may need when website gets bigger
+    - https://stackoverflow.com/questions/18212852/how-does-make-know-what-needs-to-be-compiled

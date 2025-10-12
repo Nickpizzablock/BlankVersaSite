@@ -204,8 +204,9 @@ footer {
 }
 .welcome {
     padding: 10px;
-    /* text-align: left; */
+    text-align: left;
     line-height: 1.5em;
+
 }
 @media screen and (max-width: 56em) {
     #grid {

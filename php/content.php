@@ -5,7 +5,11 @@
 require 'vendor/autoload.php';
 
 // 2. Define the path to your Markdown file
-$markdown_file_path = 'md/writing.md';
+// Check if the global variable is set, otherwise throw an error
+if (!isset($GLOBALS['markdown_file_path'])) {
+    die("Error: No markdown file path specified. Please set \$GLOBALS['markdown_file_path'] before including this file.");
+}
+$markdown_file_path = $GLOBALS['markdown_file_path'];
 
 // 3. Read the entire content of the file into a string
 // Use file_get_contents() to safely load the file data
@@ -13,7 +17,7 @@ $markdown_text = file_get_contents($markdown_file_path);
 
 // Check if the file read was successful (good practice)
 if ($markdown_text === false) {
-    die("Error: Could not read Markdown file at $markdown_file_path");
+    die("Error: Could not read Markdown file at $markdown_file_path - file does not exist or is not readable");
 }
 
 // 4. Transform the string content into HTML

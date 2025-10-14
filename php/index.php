@@ -23,9 +23,7 @@
                     </ul> 
                     </div>
                     <!-- TODO: Make breadcrumbs replace section-title -->
-                    <ul class="breadcrumb">
-                            <li>⌂ Home</li>
-                    </ul>
+<?php               include 'breadcrumb.php'; ?>
 <?php               include 'content.php'; ?>                       
                 </section>
 <?php           include 'updates.php'; ?>

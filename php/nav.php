@@ -3,7 +3,7 @@
                         ≡ Nav
                     </div>
                     <div id="nav-content">
-                        <a href="personal">
+                        <a href="/html/personal">
                             <div class="section">
                             ~Personal~
                             </div>

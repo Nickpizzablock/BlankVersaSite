@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/styles/color.css">
+        <link rel="stylesheet" href="/styles/breadcrumbs.css">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div id="island">
+            <header>
+                <!-- Header -->
+                <a href="/html"><img id="header-image" src="/images/BlankVersaLogoTrans.png" alt="header image"></a>
+            </header>
+            <main id="grid">
+                <nav class="sticky">
+                    <div class="section-title">
+                        ≡ Nav
+                    </div>
+                    <div id="nav-content">
+                        <a href="/html/personal">
+                            <div class="section">
+                            ~Personal~
+                            </div>
+                        </a>
+                        <a href="/html/personal/aboutme.html">
+                            <div class="subsection"> About Me </div>
+                        </a>
+                        <a href="/html/personal/friends.html">
+                            <div class="subsection">Friends</div>
+                        </a>
+                        <a href="/html/personal/useful-sites.html">
+                            <div class="subsection">Useful Sites</div>
+                        </a>
+                        <a href="/html/blog"><div class="section">
+                            ~Blog~
+                        </div>
+                        </a>
+                        <a href="/html/blog/anime.html">
+                            <div class="subsection">Anime</div>
+                        </a>
+                        <a href="/html/blog/following.html">
+                            <div class="subsection">Following</div>
+                        </a>
+                        <a href="/html/blog/projects.html">
+                            <div class="subsection">Projects</div>
+                        </a>
+                    </div>
+                </nav>
+                <section id="content">
+                    <div class="section-title">
+                        🖹 Content
+                         
+                    </ul> 
+                    </div>
+                    <!-- TODO: Make breadcrumbs replace section-title -->
+                    <ul class="breadcrumb">
+                            <li><a href="/html">⌂ Home</a></li>
+                            <li><a href="/html/blog">Blog</a></li>
+                            <li>article</li>
+                    </ul>                    <div class="welcome">
+                        <h1>PHP</h1>
+                        
+                        <p>I am using php as a static site generator. It is very rudimentary because I 
+                        don't want to mess with NodeJS or any javascript. I know this is very old school 
+                        but I don't like how whenever I download Node, I have to keep track will all 
+                        the versions and the documentation for those often take long to learn.</p>
+                        
+                        <h2>include</h2>
+                        
+                        <p>When dealing with <code>include 'updates.php';</code>, the output html looks 
+                        rather ugly. <code>include</code> injects php code into the file. This can be used 
+                        to add html programatically instead of using things like iframe which is 
+                        resource intensive.</p>
+                        
+                        <p>The issue is that the code is set "in place" where php does not automatically 
+                        add spaces to match the height of where the php include was placed except on 
+                        the first line. </p>
+                        
+                        <p>The solution is to keep the start brackets at the very first character, indent 
+                        the <code>include</code> to the correct spot where it should be placed, and put the end 
+                        bracket in the same line.</p>
+                        
+                        <p>The caveat is that the php file has to be correctly aligned with spaces. 
+                        Also, at the end, there should be a newline such that there is a blank line 
+                        at the end of the file.</p>
+                        
+                        <h2>UTF-8 encoding</h2>
+                        
+                        <p>My page has certain characters that did not render correctly. My original 
+                        method of static site generation is to use php and use <code>&gt;</code> to put the output 
+                        into a file. The issue is that UTF-8 did not port.</p>
+                        
+                        <p>The issue was not using Windows, powershell, or using the meta tag for php or 
+                        html.</p>
+                        
+                        <p>The solution was to make a php program that forced UTF-8. Although it is weird 
+                        to install php on the compiler machine, I think it is the most neutral method. 
+                        PHP will be on servers while using something like c, python, java will be 
+                        too convoluted to install, especially accounting for setup time or storage 
+                        space. </p>
+                    </div>                       
+                </section>
+                <section id="updates" class="sticky">
+                    <div class="section-title">
+                        🗘 Updates
+                        <!-- Note: Will be filled using JS  -->
+                    </div>
+                    <div class="section">
+                        <div class="date">✎ 10/13/25</div>
+                        <div class="content"> Using PHP and Static Generation ♡ </div>
+                    </div>
+                    <div class="section">
+                        <div class="date">✎ 10/2/25</div>
+                        <div class="content"> Launched site ♡ </div>
+                    </div>
+                    
+                </section>
+            </main>
+            <footer>
+                © BlankVersa 2025 ♥ Self-coded ♥♡ Sitemap 
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,3 +1,10 @@
+# Requirements
+Build is primarily for windows
+- PHP
+- Composer
+- Markdown to HTML via PHP https://michelf.ca/projects/php-markdown/
+https://github.com/michelf/php-markdown
+
 # TODO
 [ ] Make mobile nav better with big buttons and expanding or fullscreen box
 [ ] Make pages for...

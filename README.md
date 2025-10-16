@@ -6,7 +6,7 @@ Build is primarily for windows
 https://github.com/michelf/php-markdown
 
 # TODO
-[ ] Make mobile nav better with big buttons and expanding or fullscreen box
+[x] Make mobile nav better with big buttons and expanding or fullscreen box
 [ ] Make pages for...
     [ ] About Me
     [ ] Blog
@@ -23,3 +23,11 @@ https://github.com/michelf/php-markdown
     - does not need to be completed now, may need when website gets bigger
     - https://stackoverflow.com/questions/18212852/how-does-make-know-what-needs-to-be-compiled
 [ ] Make content 2 column like 1 picture, paragraph https://idlewords.com/talks/website_obesity.htm
+
+[ ] Kinda want a 2 column renderer for markdown
+    - Left is images, right is text
+    - Or image is always wrap around
+[ ] Or maybe I want flexbox on blog only and custom sites on personal?
+[ ] I don't like the footer... how can we make it like regular websites
+    where its darker than there is a different color background...
+    or maybe put it back wo how it was...
